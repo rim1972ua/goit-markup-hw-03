@@ -9,7 +9,28 @@
     --feature-background-color: #E5E5E5;
     --team-background-color: #F5F4FA;
     --buttom-bg-hover-color: #188CE8;
+    --border-color: #ECECEC;
 }
+
+header,
+nav,
+ul,
+li,
+p {
+    margin: 0;
+    padding: 0;
+    list-style: none;    
+}
+
+header{
+    border-bottom: 80px;
+    border-color: var(--border-color);
+}
+
+/* .page-header {
+    display: flex;
+    align-items: center;
+} */
 
 body {
     font-family: 'Roboto', sans-serif;
@@ -19,13 +40,35 @@ body {
     background-color: var(--accent-white-color);
 }
 
-li {
-    list-style: none;
+.section {
+    padding: 94px 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
 button {
     font-family: inherit;
     cursor: pointer;
+    border-radius: 4px;
+    text-align: center;
 }
 
 .logo {
@@ -35,6 +78,8 @@ button {
     line-height: 1.9;
     color: var(--accent-color);
     text-decoration: none;
+    padding-left: 215px;
+    padding-right: 93px;
 }
 
 .logo-black {
@@ -49,6 +94,19 @@ button {
     color: var(--accent-color);
 }
 
+.main-nav,
+.main-address,
+nav,
+.container.page-header {
+    display: flex;
+    align-items: center;
+}
+
+.main-nav li + li,
+.main-address li + li {
+    margin-left: 50px;
+}
+
 .main-nav a,
 .main-address a {
     font-weight: 500;
@@ -57,6 +115,9 @@ button {
     letter-spacing: 0.02em;
     color: var(--main-headers-color);
     text-decoration: none;
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
 }
 
 .main-address a {
@@ -75,6 +136,9 @@ button {
 .hero {
     background-color: var(--footer-background-color);
     text-align: center;
+    padding: 200px 0;
+    background-size: cover;
+    background-position: center;
 }
 
 .hero h1 {
@@ -84,6 +148,8 @@ button {
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--accent-white-color);
+    max-width: 696px;
+    margin: 0 auto 30px;
 }
 
 button.button-studio {
@@ -92,6 +158,7 @@ button.button-studio {
     font-weight: 700;
     font-size: 16px;
     line-height: 1.88;
+    padding: 10px 32px;
 }
 
 button.button-studio:hover,
@@ -104,9 +171,9 @@ button.button-filter {
     color: var(--main-headers-color);
     font-weight: 500;
     font-size: 16px;
-    line-height: 1.63;  
-    text-align: center;
+    line-height: 1.63;
     letter-spacing: 0.03em;
+    padding: 6px 22px;
 }
 
 button.button-filter:hover,
@@ -122,6 +189,8 @@ button.button-filter:active {
     line-height: 1.17;
     text-align: center;
     color: var(--main-headers-color);
+    margin-top: 0;
+    margin-bottom: 50px;
 }
 
 .feature-title {
@@ -130,12 +199,16 @@ button.button-filter:active {
     line-height: 1.14;
     text-transform: uppercase;
     color: var(--main-headers-color);
+    margin-top: 0;
+    margin-bottom: 10px;
 }
 
 .feature-text {
     font-size: 14px;
     line-height: 1.71;
     color: var(--main-text-color);
+    /* margin-top: 0;
+    margin-bottom: 0; */
 }
 
 .team-member-name {
