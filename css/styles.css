@@ -231,6 +231,10 @@ button.button-studio:focus {
     background-color: var(--feature-background-color);
 }
 
+.section-work {
+    padding-top: 0;
+}
+
 .section-team {
     background-color: var(--team-background-color);
 }
@@ -241,6 +245,41 @@ button.button-studio:focus {
 .filter,
 .samples {
     display: flex;
+}
+
+.feature-list li,
+.team-list li {
+    width: 270px;
+}
+
+.feature-list li + li,
+.team-list li + li {
+    margin-left: 30px;
+}
+
+.section-work li {
+    width: 370px;
+}
+
+.section-work li + li {
+    margin-left: 30px;
+}
+
+.team-list img {
+    margin-bottom: 30px;
+}
+
+.team-list h3 {
+    margin-bottom: 10px;
+}
+
+.team-list p {
+    margin-bottom: 30px;
+}
+
+.team-list h3,
+.team-list p {
+    text-align: center;
 }
 
 footer {
